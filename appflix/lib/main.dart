@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
         canvasColor: Colors.black87,
         fontFamily: 'Roboto',
         textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
+            bodyText1: TextStyle(color: Colors.white70),
+            headline6: TextStyle(
               fontSize: 24,
             )),
       ),
