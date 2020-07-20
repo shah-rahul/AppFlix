@@ -1,3 +1,4 @@
+import 'package:appflix/category_movies_screen.dart';
 import 'package:flutter/material.dart';
 import 'category_screen.dart';
 
@@ -7,20 +8,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AppFlix',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        accentColor: Colors.black87,
-        canvasColor: Colors.black87,
-        fontFamily: 'Roboto',
-        textTheme: ThemeData.light().textTheme.copyWith(
-            bodyText1: TextStyle(color: Colors.white70),
-            headline6: TextStyle(
-              fontSize: 24,
-            )),
-      ),
-      home: CategoriesScreen(),
-    );
+        title: 'AppFlix',
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+          accentColor: Colors.black87,
+          canvasColor: Colors.black87,
+          fontFamily: 'Roboto',
+          textTheme: ThemeData.light().textTheme.copyWith(
+              bodyText1: TextStyle(color: Colors.white70),
+              headline6: TextStyle(
+                fontSize: 24,
+              )),
+        ),
+        home: CategoriesScreen(),
+        routes: {"category-movies": (ctx) => CategoryMoviesScreen()});
   }
 }
 
