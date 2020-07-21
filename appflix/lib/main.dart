@@ -20,8 +20,11 @@ class MyApp extends StatelessWidget {
                 fontSize: 24,
               )),
         ),
-        home: CategoriesScreen(),
-        routes: {"category-movies": (ctx) => CategoryMoviesScreen()});
+        // home: CategoriesScreen(),
+        routes: {
+          "/": (ctx) => CategoriesScreen(),
+          CategoryMoviesScreen.routeName: (ctx) => CategoryMoviesScreen()
+        });
   }
 }
 
