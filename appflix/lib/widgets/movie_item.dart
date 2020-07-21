@@ -5,12 +5,14 @@ import '../Models/movie.dart';
 
 class MovieItem extends StatelessWidget {
   final String title;
+  final String id;
   final String imageUrl;
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
 
   MovieItem({
+    @required this.id,
     @required this.affordability,
     @required this.complexity,
     @required this.duration,
@@ -53,6 +55,7 @@ class MovieItem extends StatelessWidget {
   void selectMeal(BuildContext context) {
     Navigator.of(context).pushNamed(
       MovieDetailScreeen.routeName,
+      arguments: id,
     );
   }
 

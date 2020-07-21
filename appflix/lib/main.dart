@@ -9,24 +9,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'AppFlix',
-        theme: ThemeData(
-          primarySwatch: Colors.red,
-          accentColor: Colors.black87,
-          canvasColor: Colors.black87,
-          fontFamily: 'Roboto',
-          textTheme: ThemeData.light().textTheme.copyWith(
-              bodyText1: TextStyle(color: Colors.white70),
-              headline6: TextStyle(
-                fontSize: 24,
-              )),
-        ),
-        // home: CategoriesScreen(),
-        routes: {
-          "/": (ctx) => CategoriesScreen(),
-          MovieDetailScreeen.routeName: (ctx) => MovieDetailScreeen(),
-          CategoryMoviesScreen.routeName: (ctx) => CategoryMoviesScreen()
-        });
+      title: 'AppFlix',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        accentColor: Colors.black87,
+        canvasColor: Colors.black87,
+        fontFamily: 'Roboto',
+        textTheme: ThemeData.light().textTheme.copyWith(
+            bodyText1: TextStyle(color: Colors.white70),
+            headline6: TextStyle(
+              fontSize: 24,
+            )),
+      ),
+      // home: CategoriesScreen(),
+      routes: {
+        "/": (ctx) => CategoriesScreen(),
+        MovieDetailScreeen.routeName: (ctx) => MovieDetailScreeen(),
+        CategoryMoviesScreen.routeName: (ctx) => CategoryMoviesScreen()
+      },
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(
+          builder: (ctx) => CategoryMoviesScreen(),
+        );
+      },
+    );
   }
 }
 
