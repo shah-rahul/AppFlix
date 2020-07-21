@@ -1,6 +1,7 @@
-import 'package:appflix/category_movies_screen.dart';
+import 'package:appflix/Screens/category_movies_screen.dart';
 import 'package:flutter/material.dart';
-import 'category_screen.dart';
+import 'Screens/category_screen.dart';
+import 'Screens/movie_detail.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         // home: CategoriesScreen(),
         routes: {
           "/": (ctx) => CategoriesScreen(),
+          MovieDetailScreeen.routeName: (ctx) => MovieDetailScreeen(),
           CategoryMoviesScreen.routeName: (ctx) => CategoryMoviesScreen()
         });
   }

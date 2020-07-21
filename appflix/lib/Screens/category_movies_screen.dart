@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import "./dummy_data.dart";
+import '../dummy_data.dart';
+import '../widgets/movie_item.dart';
 
 class CategoryMoviesScreen extends StatelessWidget {
   static const routeName = "category-movies";
@@ -20,9 +21,12 @@ class CategoryMoviesScreen extends StatelessWidget {
         ),
         body: ListView.builder(
             itemBuilder: (ctx, index) {
-              return Text(
-                categoryMeals[index].title,
-                style: Theme.of(context).textTheme.bodyText1,
+              return MovieItem(
+                title: categoryMeals[index].title,
+                imageUrl: categoryMeals[index].imageUrl,
+                affordability: categoryMeals[index].affordability,
+                complexity: categoryMeals[index].complexity,
+                duration: categoryMeals[index].duration,
               );
             },
             itemCount: categoryMeals.length));

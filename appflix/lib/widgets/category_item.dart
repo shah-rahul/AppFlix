@@ -1,5 +1,5 @@
 // import 'package:appflix/category_movies_screen.dart';
-import 'package:appflix/category_movies_screen.dart';
+import 'package:appflix/Screens/category_movies_screen.dart';
 import 'package:flutter/material.dart';
 // import 'category_movies_screen.dart';
 

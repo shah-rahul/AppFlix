@@ -1,6 +1,6 @@
 import 'package:appflix/dummy_data.dart';
 import "package:flutter/material.dart";
-import './category_item.dart';
+import '../widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key key}) : super(key: key);
