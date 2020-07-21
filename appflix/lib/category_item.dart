@@ -1,4 +1,5 @@
 // import 'package:appflix/category_movies_screen.dart';
+import 'package:appflix/category_movies_screen.dart';
 import 'package:flutter/material.dart';
 // import 'category_movies_screen.dart';
 
@@ -13,8 +14,8 @@ class CategoryItem extends StatelessWidget {
     this.color,
   );
   void selectCategory(BuildContext context) {
-    Navigator.of(context)
-        .pushNamed("category-movies", arguments: {"id": id, "title": title});
+    Navigator.of(context).pushNamed(CategoryMoviesScreen.routeName,
+        arguments: {"id": id, "title": title});
   }
 
   @override

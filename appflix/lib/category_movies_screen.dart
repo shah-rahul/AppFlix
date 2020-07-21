@@ -13,14 +13,9 @@ class CategoryMoviesScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(categoryTitle),
       ),
-      body: Center(
-        child: Container(
-          child: Text(
-            "Movies in this category",
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-        ),
-      ),
+      body: ListView.builder(itemBuilder: (ctx, index){
+
+      }, itemCount: ,)
     );
   }
 }
